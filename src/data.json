@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "price": 1499,
+    "category": "Electronics",
+    "description": "Quality wireless headphones for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch",
+    "price": 2499,
+    "category": "Electronics",
+    "description": "Quality smart watch for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Bluetooth Speaker",
+    "price": 1299,
+    "category": "Electronics",
+    "description": "Quality bluetooth speaker for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Wireless Mouse",
+    "price": 699,
+    "category": "Electronics",
+    "description": "Quality wireless mouse for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Mechanical Keyboard",
+    "price": 2199,
+    "category": "Electronics",
+    "description": "Quality mechanical keyboard for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 6,
+    "name": "USB-C Hub",
+    "price": 999,
+    "category": "Electronics",
+    "description": "Quality usb-c hub for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 7,
+    "name": "Power Bank",
+    "price": 1199,
+    "category": "Electronics",
+    "description": "Quality power bank for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 8,
+    "name": "Phone Stand",
+    "price": 399,
+    "category": "Electronics",
+    "description": "Quality phone stand for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 9,
+    "name": "Laptop Sleeve",
+    "price": 899,
+    "category": "Electronics",
+    "description": "Quality laptop sleeve for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 10,
+    "name": "Webcam",
+    "price": 1599,
+    "category": "Electronics",
+    "description": "Quality webcam for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 11,
+    "name": "Cotton T-Shirt",
+    "price": 599,
+    "category": "Fashion",
+    "description": "Quality cotton t-shirt for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 12,
+    "name": "Oversized T-Shirt",
+    "price": 699,
+    "category": "Fashion",
+    "description": "Quality oversized t-shirt for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 13,
+    "name": "Casual Shirt",
+    "price": 999,
+    "category": "Fashion",
+    "description": "Quality casual shirt for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 14,
+    "name": "Denim Jacket",
+    "price": 1899,
+    "category": "Fashion",
+    "description": "Quality denim jacket for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 15,
+    "name": "Hoodie",
+    "price": 1299,
+    "category": "Fashion",
+    "description": "Quality hoodie for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 16,
+    "name": "Polo Shirt",
+    "price": 799,
+    "category": "Fashion",
+    "description": "Quality polo shirt for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 17,
+    "name": "Cargo Pants",
+    "price": 1399,
+    "category": "Fashion",
+    "description": "Quality cargo pants for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 18,
+    "name": "Slim Fit Jeans",
+    "price": 1599,
+    "category": "Fashion",
+    "description": "Quality slim fit jeans for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 19,
+    "name": "Chino Pants",
+    "price": 1199,
+    "category": "Fashion",
+    "description": "Quality chino pants for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 20,
+    "name": "Track Pants",
+    "price": 899,
+    "category": "Fashion",
+    "description": "Quality track pants for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 21,
+    "name": "Running Shoes",
+    "price": 1999,
+    "category": "Shoes",
+    "description": "Quality running shoes for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 22,
+    "name": "Sneakers",
+    "price": 2299,
+    "category": "Shoes",
+    "description": "Quality sneakers for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 23,
+    "name": "Sports Shoes",
+    "price": 2499,
+    "category": "Shoes",
+    "description": "Quality sports shoes for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 24,
+    "name": "Canvas Shoes",
+    "price": 1199,
+    "category": "Shoes",
+    "description": "Quality canvas shoes for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 25,
+    "name": "Loafers",
+    "price": 1799,
+    "category": "Shoes",
+    "description": "Quality loafers for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 26,
+    "name": "Formal Shoes",
+    "price": 2199,
+    "category": "Shoes",
+    "description": "Quality formal shoes for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 27,
+    "name": "Sandals",
+    "price": 899,
+    "category": "Shoes",
+    "description": "Quality sandals for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 28,
+    "name": "Flip Flops",
+    "price": 399,
+    "category": "Shoes",
+    "description": "Quality flip flops for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 29,
+    "name": "Walking Shoes",
+    "price": 1899,
+    "category": "Shoes",
+    "description": "Quality walking shoes for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 30,
+    "name": "High Top Sneakers",
+    "price": 2599,
+    "category": "Shoes",
+    "description": "Quality high top sneakers for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 31,
+    "name": "Backpack",
+    "price": 1299,
+    "category": "Bags",
+    "description": "Quality backpack for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 32,
+    "name": "Laptop Backpack",
+    "price": 1799,
+    "category": "Bags",
+    "description": "Quality laptop backpack for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 33,
+    "name": "Travel Bag",
+    "price": 1999,
+    "category": "Bags",
+    "description": "Quality travel bag for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 34,
+    "name": "Sling Bag",
+    "price": 799,
+    "category": "Bags",
+    "description": "Quality sling bag for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 35,
+    "name": "Crossbody Bag",
+    "price": 999,
+    "category": "Bags",
+    "description": "Quality crossbody bag for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 36,
+    "name": "Tote Bag",
+    "price": 599,
+    "category": "Bags",
+    "description": "Quality tote bag for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 37,
+    "name": "Wallet",
+    "price": 499,
+    "category": "Bags",
+    "description": "Quality wallet for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 38,
+    "name": "Leather Wallet",
+    "price": 899,
+    "category": "Bags",
+    "description": "Quality leather wallet for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 39,
+    "name": "Gym Bag",
+    "price": 1199,
+    "category": "Bags",
+    "description": "Quality gym bag for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 40,
+    "name": "Messenger Bag",
+    "price": 1399,
+    "category": "Bags",
+    "description": "Quality messenger bag for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 41,
+    "name": "Face Wash",
+    "price": 349,
+    "category": "Beauty",
+    "description": "Quality face wash for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 42,
+    "name": "Moisturizer",
+    "price": 499,
+    "category": "Beauty",
+    "description": "Quality moisturizer for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 43,
+    "name": "Sunscreen SPF 50",
+    "price": 599,
+    "category": "Beauty",
+    "description": "Quality sunscreen spf 50 for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 44,
+    "name": "Lip Balm",
+    "price": 199,
+    "category": "Beauty",
+    "description": "Quality lip balm for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 45,
+    "name": "Body Lotion",
+    "price": 399,
+    "category": "Beauty",
+    "description": "Quality body lotion for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 46,
+    "name": "Shampoo",
+    "price": 449,
+    "category": "Beauty",
+    "description": "Quality shampoo for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 47,
+    "name": "Conditioner",
+    "price": 449,
+    "category": "Beauty",
+    "description": "Quality conditioner for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 48,
+    "name": "Perfume",
+    "price": 999,
+    "category": "Beauty",
+    "description": "Quality perfume for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 49,
+    "name": "Makeup Brush Set",
+    "price": 699,
+    "category": "Beauty",
+    "description": "Quality makeup brush set for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 50,
+    "name": "Hair Dryer",
+    "price": 1299,
+    "category": "Beauty",
+    "description": "Quality hair dryer for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 51,
+    "name": "Coffee Maker",
+    "price": 2499,
+    "category": "Home",
+    "description": "Quality coffee maker for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 52,
+    "name": "Electric Kettle",
+    "price": 1199,
+    "category": "Home",
+    "description": "Quality electric kettle for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 53,
+    "name": "Water Bottle",
+    "price": 599,
+    "category": "Home",
+    "description": "Quality water bottle for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 54,
+    "name": "Desk Lamp",
+    "price": 899,
+    "category": "Home",
+    "description": "Quality desk lamp for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 55,
+    "name": "Table Clock",
+    "price": 499,
+    "category": "Home",
+    "description": "Quality table clock for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 56,
+    "name": "Cushion",
+    "price": 399,
+    "category": "Home",
+    "description": "Quality cushion for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 57,
+    "name": "Bedsheet Set",
+    "price": 999,
+    "category": "Home",
+    "description": "Quality bedsheet set for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 58,
+    "name": "Pillow",
+    "price": 599,
+    "category": "Home",
+    "description": "Quality pillow for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 59,
+    "name": "Storage Box",
+    "price": 499,
+    "category": "Home",
+    "description": "Quality storage box for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 60,
+    "name": "Wall Clock",
+    "price": 799,
+    "category": "Home",
+    "description": "Quality wall clock for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 61,
+    "name": "Notebook",
+    "price": 199,
+    "category": "Stationery",
+    "description": "Quality notebook for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 62,
+    "name": "Planner",
+    "price": 299,
+    "category": "Stationery",
+    "description": "Quality planner for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 63,
+    "name": "Ball Pen Set",
+    "price": 149,
+    "category": "Stationery",
+    "description": "Quality ball pen set for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 64,
+    "name": "Marker Set",
+    "price": 249,
+    "category": "Stationery",
+    "description": "Quality marker set for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 65,
+    "name": "Highlighter Set",
+    "price": 199,
+    "category": "Stationery",
+    "description": "Quality highlighter set for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 66,
+    "name": "Sketchbook",
+    "price": 299,
+    "category": "Stationery",
+    "description": "Quality sketchbook for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 67,
+    "name": "Pencil Set",
+    "price": 129,
+    "category": "Stationery",
+    "description": "Quality pencil set for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 68,
+    "name": "Desk Organizer",
+    "price": 349,
+    "category": "Stationery",
+    "description": "Quality desk organizer for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 69,
+    "name": "Sticky Notes",
+    "price": 99,
+    "category": "Stationery",
+    "description": "Quality sticky notes for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 70,
+    "name": "File Folder",
+    "price": 149,
+    "category": "Stationery",
+    "description": "Quality file folder for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 71,
+    "name": "Yoga Mat",
+    "price": 799,
+    "category": "Sports",
+    "description": "Quality yoga mat for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 72,
+    "name": "Dumbbells",
+    "price": 1499,
+    "category": "Sports",
+    "description": "Quality dumbbells for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 73,
+    "name": "Skipping Rope",
+    "price": 299,
+    "category": "Sports",
+    "description": "Quality skipping rope for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 74,
+    "name": "Football",
+    "price": 699,
+    "category": "Sports",
+    "description": "Quality football for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 75,
+    "name": "Basketball",
+    "price": 799,
+    "category": "Sports",
+    "description": "Quality basketball for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 76,
+    "name": "Cricket Bat",
+    "price": 1599,
+    "category": "Sports",
+    "description": "Quality cricket bat for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 77,
+    "name": "Cricket Ball",
+    "price": 299,
+    "category": "Sports",
+    "description": "Quality cricket ball for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 78,
+    "name": "Tennis Racket",
+    "price": 1899,
+    "category": "Sports",
+    "description": "Quality tennis racket for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 79,
+    "name": "Resistance Bands",
+    "price": 599,
+    "category": "Sports",
+    "description": "Quality resistance bands for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 80,
+    "name": "Gym Gloves",
+    "price": 499,
+    "category": "Sports",
+    "description": "Quality gym gloves for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 81,
+    "name": "Ceramic Mug",
+    "price": 299,
+    "category": "Kitchen",
+    "description": "Quality ceramic mug for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 82,
+    "name": "Frying Pan",
+    "price": 899,
+    "category": "Kitchen",
+    "description": "Quality frying pan for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 83,
+    "name": "Dinner Plate Set",
+    "price": 999,
+    "category": "Kitchen",
+    "description": "Quality dinner plate set for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 84,
+    "name": "Cutlery Set",
+    "price": 799,
+    "category": "Kitchen",
+    "description": "Quality cutlery set for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 85,
+    "name": "Kitchen Knife",
+    "price": 499,
+    "category": "Kitchen",
+    "description": "Quality kitchen knife for everyday use.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 86,
+    "name": "Lunch Box",
+    "price": 599,
+    "category": "Kitchen",
+    "description": "Quality lunch box for everyday use.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 87,
+    "name": "Spice Rack",
+    "price": 699,
+    "category": "Kitchen",
+    "description": "Quality spice rack for everyday use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 88,
+    "name": "Glass Bottle Set",
+    "price": 799,
+    "category": "Kitchen",
+    "description": "Quality glass bottle set for everyday use.",
+    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 89,
+    "name": "Chopping Board",
+    "price": 399,
+    "category": "Kitchen",
+    "description": "Quality chopping board for everyday use.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 90,
+    "name": "Food Storage Containers",
+    "price": 899,
+    "category": "Kitchen",
+    "description": "Quality food storage containers for everyday use.",
+    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 91,
+    "name": "Plant Pot",
+    "price": 299,
+    "category": "Garden",
+    "description": "Quality plant pot for everyday use.",
+    "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 92,
+    "name": "Watering Can",
+    "price": 399,
+    "category": "Garden",
+    "description": "Quality watering can for everyday use.",
+    "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 93,
+    "name": "Gardening Gloves",
+    "price": 249,
+    "category": "Garden",
+    "description": "Quality gardening gloves for everyday use.",
+    "image": "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 94,
+    "name": "Garden Tool Set",
+    "price": 699,
+    "category": "Garden",
+    "description": "Quality garden tool set for everyday use.",
+    "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 95,
+    "name": "Artificial Plant",
+    "price": 499,
+    "category": "Garden",
+    "description": "Quality artificial plant for everyday use.",
+    "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 96,
+    "name": "LED String Lights",
+    "price": 599,
+    "category": "Garden",
+    "description": "Quality led string lights for everyday use.",
+    "image": "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 97,
+    "name": "Outdoor Lantern",
+    "price": 899,
+    "category": "Garden",
+    "description": "Quality outdoor lantern for everyday use.",
+    "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 98,
+    "name": "Plant Stand",
+    "price": 799,
+    "category": "Garden",
+    "description": "Quality plant stand for everyday use.",
+    "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 99,
+    "name": "Seed Starter Kit",
+    "price": 349,
+    "category": "Garden",
+    "description": "Quality seed starter kit for everyday use.",
+    "image": "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    "id": 100,
+    "name": "Pruning Shears",
+    "price": 399,
+    "category": "Garden",
+    "description": "Quality pruning shears for everyday use.",
+    "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80"
+  }
+]
