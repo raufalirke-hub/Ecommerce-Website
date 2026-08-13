@@ -1,50 +1,8 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-
-const products = [
-  {
-    id: 1,
-    name: "Classic Sneakers",
-    price: "₹1,999",
-    image:
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80",
-  },
-  {
-    id: 2,
-    name: "Premium Watch",
-    price: "₹2,499",
-    image:
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80",
-  },
-  {
-    id: 3,
-    name: "Leather Backpack",
-    price: "₹1,799",
-    image:
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=80",
-  },
-  {
-    id: 4,
-    name: "Wireless Headphones",
-    price: "₹2,999",
-    image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80",
-  },
-  {
-    id: 5,
-    name: "Casual Sunglasses",
-    price: "₹999",
-    image:
-      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=700&q=80",
-  },
-  {
-    id: 6,
-    name: "Smart Phone",
-    price: "₹14,999",
-    image:
-      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=700&q=80",
-  },
-];
+import products from "./data.json";
+import Login from "./Login";
+import Register from "./Register";
 
 function Navbar() {
   return (
@@ -57,14 +15,21 @@ function Navbar() {
         <li>
           <Link to="/">Home</Link>
         </li>
+
         <li>
           <Link to="/products">Products</Link>
         </li>
+
         <li>
           <Link to="/about">About Us</Link>
         </li>
+
         <li>
           <Link to="/terms">Terms of Use</Link>
+        </li>
+
+        <li>
+          <Link to="/login">Login</Link>
         </li>
       </ul>
     </nav>
@@ -75,6 +40,7 @@ function Footer() {
   return (
     <footer className="footer">
       <h3>ShopEase</h3>
+
       <p>Your simple and trusted online store.</p>
 
       <div className="footer-links">
@@ -216,6 +182,20 @@ function Terms() {
   );
 }
 
+/* 
+   This checks whether the user is logged in.
+   If not logged in, user will see Login page.
+*/
+function ProtectedRoute({ children }) {
+  const isLoggedIn = localStorage.getItem("loggedInUser");
+
+  if (!isLoggedIn) {
+    return <Login />;
+  }
+
+  return children;
+}
+
 function App() {
   return (
     <BrowserRouter>
@@ -223,9 +203,23 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+
+        <Route
+          path="/products"
+          element={
+            <ProtectedRoute>
+              <Products />
+            </ProtectedRoute>
+          }
+        />
+
         <Route path="/about" element={<About />} />
+
         <Route path="/terms" element={<Terms />} />
+
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/register" element={<Register />} />
       </Routes>
 
       <Footer />
