@@ -33,8 +33,7 @@ function Register() {
     };
 
     users.push(newUser);
-
-    localStorage.setItem("users", JSON.stringify(users));
+ localStorage.setItem("users", JSON.stringify(users));
 
     setMessage("Registration successful!");
 

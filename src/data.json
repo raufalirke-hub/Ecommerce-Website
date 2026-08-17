@@ -45,7 +45,7 @@
     "price": 999,
     "category": "Electronics",
     "description": "Quality usb-c hub for everyday use.",
-    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=800&q=80"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "price": 1199,
     "category": "Electronics",
     "description": "Quality power bank for everyday use.",
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=800&q=80"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "price": 399,
     "category": "Electronics",
     "description": "Quality phone stand for everyday use.",
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?auto=format&fit=crop&w=800&q=80"
   },
   {
     "id": 9,
@@ -69,7 +69,7 @@
     "price": 899,
     "category": "Electronics",
     "description": "Quality laptop sleeve for everyday use.",
-    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
   },
   {
     "id": 10,
@@ -77,7 +77,7 @@
     "price": 1599,
     "category": "Electronics",
     "description": "Quality webcam for everyday use.",
-    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1587826080692-f439cd0b70da?auto=format&fit=crop&w=800&q=80"
   },
   {
     "id": 11,
@@ -85,7 +85,7 @@
     "price": 599,
     "category": "Fashion",
     "description": "Quality cotton t-shirt for everyday use.",
-    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"
   },
   {
     "id": 12,
@@ -93,7 +93,7 @@
     "price": 699,
     "category": "Fashion",
     "description": "Quality oversized t-shirt for everyday use.",
-    "image": "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=800&q=80"
   },
   {
     "id": 13,
@@ -101,7 +101,7 @@
     "price": 999,
     "category": "Fashion",
     "description": "Quality casual shirt for everyday use.",
-    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=800&q=80"
   },
   {
     "id": 14,
@@ -109,23 +109,23 @@
     "price": 1899,
     "category": "Fashion",
     "description": "Quality denim jacket for everyday use.",
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80"
   },
-  {
-    "id": 15,
-    "name": "Hoodie",
-    "price": 1299,
-    "category": "Fashion",
-    "description": "Quality hoodie for everyday use.",
-    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=800&q=80"
-  },
+ {
+  "id": 15,
+  "name": "Hoodie",
+  "price": 1299,
+  "category": "Fashion",
+  "description": "Quality hoodie for everyday use.",
+  "image": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=800&q=80"
+},
   {
     "id": 16,
     "name": "Polo Shirt",
     "price": 799,
     "category": "Fashion",
     "description": "Quality polo shirt for everyday use.",
-    "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=800&q=80"
+    "image": "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?auto=format&fit=crop&w=800&q=80"
   },
   {
     "id": 17,

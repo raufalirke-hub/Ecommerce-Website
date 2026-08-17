@@ -1,15 +1,46 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import "./App.css";
+import { useCart } from "./CartContext.jsx";
+
 import products from "./data.json";
 import Login from "./Login";
 import Register from "./Register";
+import ProductDetails from "./ProductDetails";
+import Cart from "./Cart";
 
 function Navbar() {
+  const [search, setSearch] = useState("");
+  const { cartCount } = useCart();
+  const navigate = useNavigate();
+
+  function handleSearch() {
+    if (search.trim() !== "") { 
+      navigate("/products?search=" + search);
+    }
+  }
+
   return (
     <nav className="navbar">
       <Link to="/" className="logo">
         ShopEase
       </Link>
+
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              handleSearch();
+            }
+          }}
+        />
+
+        <button onClick={handleSearch}>Search</button>
+      </div>
 
       <ul className="nav-links">
         <li>
@@ -19,7 +50,13 @@ function Navbar() {
         <li>
           <Link to="/products">Products</Link>
         </li>
-
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+        <li>
+          <Link to="/register">Register</Link>
+        </li>
+        
         <li>
           <Link to="/about">About Us</Link>
         </li>
@@ -29,7 +66,7 @@ function Navbar() {
         </li>
 
         <li>
-          <Link to="/login">Login</Link>
+          <Link to="/cart">cart({cartCount})</Link>
         </li>
       </ul>
     </nav>
@@ -56,8 +93,23 @@ function Footer() {
 }
 
 function Home() {
+  const categories = [
+    "Electronics",
+    "Fashion",
+    "Shoes",
+    "Bags",
+    "Beauty",
+    "Home",
+    "Sports",
+    "Stationery",
+  ];
+
+  const brands = ["Apple", "Samsung", "Nike", "Adidas", "Puma", "Sony"];
+
   return (
     <>
+      {/* HERO BANNER */}
+
       <section className="hero-section">
         <div className="hero-content">
           <h1>Everything You Need, All in One Place.</h1>
@@ -79,45 +131,161 @@ function Home() {
         />
       </section>
 
+      {/* CATEGORIES */}
+
+      <section className="section">
+        <h2 className="section-title">Shop by Category</h2>
+
+        <div className="categories-grid">
+          {categories.map((category) => (
+            <div className="category-card" key={category}>
+              <h3>{category}</h3>
+              <p>Explore {category}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* BRANDS */}
+
+      <section className="section brands-section">
+        <h2 className="section-title">Popular Brands</h2>
+
+        <div className="brands-grid">
+          {brands.map((brand) => (
+            <div className="brand-card" key={brand}>
+              {brand}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* PRODUCTS */}
+
       <section className="section">
         <h2 className="section-title">Featured Products</h2>
 
         <div className="products-grid">
-          {products.slice(0, 3).map((product) => (
+          {products.slice(0, 16).map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
+        </div>
+
+        <div className="view-products">
+          <Link to="/products" className="hero-btn">
+            View All Products
+          </Link>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+
+      <section className="about-home">
+        <div>
+          <h2>About ShopEase</h2>
+
+          <p>
+            ShopEase is a simple online shopping platform where you can
+            discover different products at affordable prices. We focus on
+            making shopping easy, clean and convenient for everyone.
+          </p>
+
+          <Link to="/about" className="hero-btn">
+            Learn More
+          </Link>
         </div>
       </section>
     </>
   );
 }
-
 function ProductCard({ product }) {
+  const { addToCart } = useCart();
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.name} />
+      <Link to={"/product/" + product.id}>
+        <img
+          src={product.image}
+          alt={product.name}
+        />
+      </Link>
 
       <h3>{product.name}</h3>
 
-      <p>Premium quality product for your everyday needs.</p>
+      <p>{product.description}</p>
 
-      <span className="price">{product.price}</span>
+      <span className="price">
+        {product.price}
+      </span>
 
-      <button className="buy-btn">Add to Cart</button>
+      <button className="buy-btn" 
+onClick={() => addToCart(product)}>
+        Add to Cart
+      </button>
     </div>
   );
 }
-
 function Products() {
+  const { cart, addToCart } = useCart();
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const searchParams = new URLSearchParams(window.location.search);
+  const search = searchParams.get("search") || "";
+
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  const productsPerPage = 20;
+
+  const totalPages = Math.ceil(
+    filteredProducts.length / productsPerPage
+  );
+
+  const startIndex = (currentPage - 1) * productsPerPage;
+
+  const currentProducts = filteredProducts.slice(
+    startIndex,
+    startIndex + productsPerPage
+  );
+
   return (
-    <section className="section">
-      <h1 className="section-title">Our Products</h1>
+    <section className="products-page">
+      <h1>All Products</h1>
+
+      <p className="products-subtitle">
+        Explore our complete collection of products.
+      </p>
 
       <div className="products-grid">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        {currentProducts.length > 0 ? (
+          currentProducts.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+            />
+          ))
+        ) : (
+          <p>No products found.</p>
+        )}
       </div>
+
+      {totalPages > 1 && (
+        <div className="pagination">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index + 1}
+              onClick={() => setCurrentPage(index + 1)}
+              className={
+                currentPage === index + 1
+                  ? "active-page"
+                  : ""
+              }
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
+      )}
     </section>
   );
 }
@@ -128,8 +296,9 @@ function About() {
       <h1>About Us</h1>
 
       <p>
-        Welcome to ShopEase, a simple frontend ecommerce website created using
-        React. Our goal is to provide a clean and easy shopping experience.
+        Welcome to ShopEase, a simple frontend ecommerce website created
+        using React. Our goal is to provide a clean and easy shopping
+        experience.
       </p>
 
       <h2>What We Do</h2>
@@ -142,8 +311,8 @@ function About() {
       <h2>Our Mission</h2>
 
       <p>
-        Our mission is to make online shopping simple, fast and enjoyable for
-        everyone.
+        Our mission is to make online shopping simple, fast and enjoyable
+        for everyone.
       </p>
     </section>
   );
@@ -162,15 +331,15 @@ function Terms() {
       <h2>Products</h2>
 
       <p>
-        All products displayed on this website are for demonstration purposes
-        only. Product information and prices are frontend data.
+        All products displayed on this website are for demonstration
+        purposes only. Product information and prices are frontend data.
       </p>
 
       <h2>Website Usage</h2>
 
       <p>
-        Users should not misuse, copy, or attempt to damage the website or its
-        content.
+        Users should not misuse, copy, or attempt to damage the website
+        or its content.
       </p>
 
       <h2>Changes</h2>
@@ -182,10 +351,11 @@ function Terms() {
   );
 }
 
-/* 
-   This checks whether the user is logged in.
-   If not logged in, user will see Login page.
+/*
+This checks whether the user is logged in.
+If not logged in, user will see Login page.
 */
+
 function ProtectedRoute({ children }) {
   const isLoggedIn = localStorage.getItem("loggedInUser");
 
@@ -213,6 +383,11 @@ function App() {
           }
         />
 
+        <Route
+          path="/product/:id"
+          element={<ProductDetails />}
+        />
+        <Route path="/cart" element={<Cart />} /> 
         <Route path="/about" element={<About />} />
 
         <Route path="/terms" element={<Terms />} />
