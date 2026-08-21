@@ -8,6 +8,8 @@ import Login from "./Login";
 import Register from "./Register";
 import ProductDetails from "./ProductDetails";
 import Cart from "./Cart";
+import Checkout from "./Checkout";
+import Admin from "./Admin";
 
 function Navbar() {
   const [search, setSearch] = useState("");
@@ -388,6 +390,11 @@ function App() {
           element={<ProductDetails />}
         />
         <Route path="/cart" element={<Cart />} /> 
+
+        <Route path="/checkout" element={<Checkout />} />
+
+        <Route path="/admin" element={<Admin />} />
+
         <Route path="/about" element={<About />} />
 
         <Route path="/terms" element={<Terms />} />

@@ -1,7 +1,9 @@
 import { useCart } from "./CartContext";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
   const { cart, removeFromCart, updateQuantity } = useCart();
+  const navigate = useNavigate();
 
   const totalPrice = cart.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -50,10 +52,20 @@ function Cart() {
           ))}
 
           <h3>Total: ₹{totalPrice}</h3>
+
+          <div className="cart-actions">
+            <button onClick={() => navigate("/products")}>
+              Continue Shopping
+            </button>
+
+            <button onClick={() => navigate("/checkout")}>
+              Checkout
+            </button>
+          </div>
         </>
       )}
     </div>
   );
 }
 
-export default Cart;
+export default Cart;  
