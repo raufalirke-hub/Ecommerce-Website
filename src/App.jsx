@@ -17,7 +17,7 @@ function Navbar() {
   const navigate = useNavigate();
 
   function handleSearch() {
-    if (search.trim() !== "") { 
+    if (search.trim() !== "") {
       navigate("/products?search=" + search);
     }
   }
@@ -52,13 +52,15 @@ function Navbar() {
         <li>
           <Link to="/products">Products</Link>
         </li>
+
         <li>
           <Link to="/login">Login</Link>
         </li>
+
         <li>
           <Link to="/register">Register</Link>
         </li>
-        
+
         <li>
           <Link to="/about">About Us</Link>
         </li>
@@ -68,7 +70,7 @@ function Navbar() {
         </li>
 
         <li>
-          <Link to="/cart">cart({cartCount})</Link>
+          <Link to="/cart">Cart ({cartCount})</Link>
         </li>
       </ul>
     </nav>
@@ -96,55 +98,133 @@ function Footer() {
 
 function Home() {
   const categories = [
-    "Electronics",
-    "Fashion",
-    "Shoes",
-    "Bags",
-    "Beauty",
-    "Home",
-    "Sports",
-    "Stationery",
+    {
+      name: "Electronics",
+      image:
+        "https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=600&q=80",
+    },
+    {
+      name: "Fashion",
+      image:
+        "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=600&q=80",
+    },
+    {
+      name: "Shoes",
+      image:
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+    },
+    {
+      name: "Beauty",
+      image:
+        "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80",
+    },
   ];
 
   const brands = ["Apple", "Samsung", "Nike", "Adidas", "Puma", "Sony"];
 
   return (
     <>
-      {/* HERO BANNER */}
+      {/* HERO SECTION */}
 
       <section className="hero-section">
         <div className="hero-content">
-          <h1>Everything You Need, All in One Place.</h1>
+          <span className="hero-tag">NEW COLLECTION 2026</span>
+
+          <h1>
+            Discover Products You
+            <span> Will Love</span>
+          </h1>
 
           <p>
-            Discover quality products at affordable prices. Shop your
-            favourites from our simple and modern online store.
+            Explore the latest products, trending styles and everyday
+            essentials all in one place.
           </p>
 
-          <Link to="/products" className="hero-btn">
-            Shop Now
-          </Link>
+          <div className="hero-actions">
+            <Link to="/products" className="hero-btn">
+              Shop Now
+            </Link>
+
+            <Link to="/about" className="hero-link">
+              Explore More →
+            </Link>
+          </div>
         </div>
 
-        <img
-          className="hero-image"
-          src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80"
-          alt="Online shopping"
-        />
+        <div className="hero-image-wrapper">
+          <img
+            className="hero-image"
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80"
+            alt="Shopping collection"
+          />
+        </div>
       </section>
 
       {/* CATEGORIES */}
 
-      <section className="section">
-        <h2 className="section-title">Shop by Category</h2>
+      <section className="section categories-section">
+        <div className="section-heading">
+          <div>
+            <span>EXPLORE</span>
+            <h2>Shop by Category</h2>
+          </div>
+
+          <Link to="/products">View All →</Link>
+        </div>
 
         <div className="categories-grid">
           {categories.map((category) => (
-            <div className="category-card" key={category}>
-              <h3>{category}</h3>
-              <p>Explore {category}</p>
-            </div>
+            <Link
+              to="/products"
+              className="category-card"
+              key={category.name}
+            >
+              <img src={category.image} alt={category.name} />
+
+              <div className="category-overlay">
+                <h3>{category.name}</h3>
+                <span>Shop Now →</span>
+              </div>
+            </Link>
           ))}
+        </div>
+      </section>
+
+      {/* FEATURED PRODUCTS */}
+
+      <section className="section featured-section">
+        <div className="section-heading">
+          <div>
+            <span>POPULAR PRODUCTS</span>
+            <h2>Featured Products</h2>
+          </div>
+
+          <Link to="/products">View All Products →</Link>
+        </div>
+
+        <div className="products-grid">
+          {products.slice(0, 8).map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
+
+      {/* PROMOTIONAL BANNER */}
+
+      <section className="promo-section">
+        <div className="promo-content">
+          <span>LIMITED TIME OFFER</span>
+
+          <h2>Get the Best Deals on Your Favourite Products</h2>
+
+          <p>
+            Discover great products at great prices and make your shopping
+            experience easier.
+          </p>
+
+          <Link to="/products" className="hero-btn">
+            Explore Deals
+          </Link>
         </div>
       </section>
 
@@ -162,37 +242,20 @@ function Home() {
         </div>
       </section>
 
-      {/* PRODUCTS */}
-
-      <section className="section">
-        <h2 className="section-title">Featured Products</h2>
-
-        <div className="products-grid">
-          {products.slice(0, 16).map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-
-        <div className="view-products">
-          <Link to="/products" className="hero-btn">
-            View All Products
-          </Link>
-        </div>
-      </section>
-
       {/* ABOUT */}
 
       <section className="about-home">
-        <div>
-          <h2>About ShopEase</h2>
+        <div className="about-content">
+          <span>ABOUT SHOPEASE</span>
+
+          <h2>Shopping Made Simple</h2>
 
           <p>
-            ShopEase is a simple online shopping platform where you can
-            discover different products at affordable prices. We focus on
-            making shopping easy, clean and convenient for everyone.
+            ShopEase brings different products together in one simple and
+            convenient online shopping experience.
           </p>
 
-          <Link to="/about" className="hero-btn">
+          <Link to="/about" className="about-btn">
             Learn More
           </Link>
         </div>
