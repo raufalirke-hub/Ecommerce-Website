@@ -1,60 +1,69 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import usersData from "./Users.json";
-function Login() {
- const navigate = useNavigate();
-  const [username, setUsername] = useState("");
+import "./App.css";
+
+export default function Login() {
+  const [loginId, setLoginId] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
-  
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
-
-  const users = JSON.parse(localStorage.getItem("users")) || usersData;
-const user = users.find(
-  (user) =>
-    user.username === username && user.password === password
-);
-    if(user) {
-      localStorage.setItem("loggedInUser", user.username);
-      navigate("/products");
-    } else {
-      setMessage("Invalid username or password.");
-    } 
+    if (loginId.trim() === "" || password.trim() === "") {
+      alert("Please fill all fields");
+      return;
+    }
+    // yahan email ya username dono se login hoga
+    localStorage.setItem("loggedInUser", loginId);
+    navigate("/products");
   };
 
   return (
-    <div className="auth-page">
-      <div className="auth-box">
-        <h1>Login</h1>
+    <div className="login-page-new">
+      <div className="login-left">
+        <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?q=80&w=800" alt="fashion" />
+        <div className="login-left-text">
+          <h3>Your Style, Your Story.</h3>
+          <p>Whether you're dreaming of chic styles, trending fits, or timeless essentials, your fashion journey starts here.</p>
+        </div>
+      </div>
 
-        <form onSubmit={handleLogin}>
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+      <div className="login-right">
+        <div className="login-box">
+          <span className="login-welcome-badge">WELCOME BACK</span>
+          <h1>Welcome to ShopEase! 👋</h1>
+          <p className="login-sub">Good to see you again. Login to continue exploring and your dream outfit is just a click away!</p>
 
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <form onSubmit={handleLogin}>
+            <label>Username or Email</label>
+            <input 
+              type="text" 
+              placeholder="Enter your username or email" 
+              value={loginId}
+              onChange={(e) => setLoginId(e.target.value)}
+              required 
+            />
 
-          <button type="submit">Login</button>
-        </form>
+            <label>Password</label>
+            <input 
+              type="password" 
+              placeholder="Enter your password" 
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required 
+            />
 
-        {message && <p>{message}</p>}
+            <div className="login-options">
+              <span>New to ShopEase? <Link to="/register">Create an Account</Link></span>
+              <Link to="#">Forgot password?</Link>
+            </div>
 
-        <p>
-          Don't have an account? <Link to="/register">Register</Link>
-        </p>
+            <button type="submit" className="login-main-btn">Login - Continue Exploring and Shopping</button>
+          </form>
+
+          <p className="login-secure">🔒 Secure login with username/email only</p>
+        </div>
       </div>
     </div>
   );
-}
-
-export default Login;
+} 

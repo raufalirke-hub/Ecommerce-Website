@@ -1,78 +1,47 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import usersData from "./Users.json";
+import { Link } from "react-router-dom"
+import { useState } from "react"
 
-function Register() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
+export default function Register(){
+  const [show,setShow]=useState(false)
+  return(
+    <div className="cloth-auth">
+      <div className="cloth-left">
+        <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?q=80&w=1000" alt="fashion" />
+      </div>
 
-  const handleRegister = (e) => {
-    e.preventDefault();
+      <div className="cloth-right">
+        <h1>JOIN THE STYLE CLUB</h1>
+        <p className="cloth-sub">Create account to shop new drops, exclusive offers & track your orders.</p>
 
-    if (!username || !password) {
-      setMessage("Please enter username and password.");
-      return;
-    }
+        <div className="field">
+          <label>Full Name</label>
+          <input placeholder="Enter your full name" />
+        </div>
 
-    const users = JSON.parse(localStorage.getItem("users")) || [];
+        <div className="field">
+          <label>Email</label>
+          <input placeholder="Enter your email" />
+        </div>
 
-    const existingUser = users.find(
-      (user) => user.username === username
-    );
+        <div className="field">
+          <label>Password</label>
+          <div className="pass">
+            <input type={show?"text":"password"} placeholder="Create password" />
+            <span onClick={()=>setShow(!show)}>👁</span>
+          </div>
+        </div>
 
-    if (existingUser) {
-      setMessage("Username already exists.");
-      return;
-    }
+        <p className="login-text">Already have an account? <Link to="/login">Login</Link></p>
 
-    const newUser = {
-      id: users.length + 1,
-      username: username,
-      password: password,
-    };
+        <button className="black-btn">Create Account</button>
 
-    users.push(newUser);
- localStorage.setItem("users", JSON.stringify(users));
+        <p className="or-text">Or continue with</p>
 
-    setMessage("Registration successful!");
-
-    setUsername("");
-    setPassword("");
-  };
-
-  return (
-    <div className="auth-page">
-      <div className="auth-box">
-        <h1>Register</h1>
-
-        <form onSubmit={handleRegister}>
-          <input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
-          <button type="submit">Register</button>
-        </form>
-
-        {message && <p>{message}</p>}
-
-        <p>
-          Already have an account?{" "}
-          <Link to="/login">Login</Link>
-        </p>
+        <div className="social-2">
+          <button>Google</button>
+          <button>Apple</button>
+        </div>
       </div>
     </div>
-  );
-}
-
-export default Register;
+  )
+} 
